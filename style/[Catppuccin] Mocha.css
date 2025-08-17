@@ -100,9 +100,10 @@ window#waybar.empty #window {
     border: 0.5px solid @overlay0;
     padding-top: 2px;
     padding-bottom: 2px;
-    padding-right: 6px;
+    padding-right: 10px;
     padding-left: 4px;
     border-radius: 10px;
+    margin-right: 10px;
 }
 
 .modules-left,
@@ -114,10 +115,8 @@ window#waybar.empty #window {
 #backlight-slider,
 #battery,
 #bluetooth,
-#clock,
 #cpu,
 #disk,
-#idle_inhibitor,
 #keyboard-state,
 #memory,
 #mode,
@@ -143,7 +142,6 @@ window#waybar.empty #window {
 #custom-keyboard,
 #custom-light_dark,
 #custom-lock,
-#custom-hint,
 #custom-hypridle,
 #custom-menu,
 #custom-playerctl,
@@ -172,6 +170,29 @@ window#waybar.empty #window {
     padding-right: 6px;
     padding-left: 6px;
 }
+
+#clock,
+#idle_inhibitor,
+#custom-hint 
+{
+    padding-top: 6px;
+    padding-bottom: 4px;
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+#custom-hint:hover {
+    color: @mauve;
+    background-color: @surface0;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
 /*-----Indicators----*/
 #custom-hypridle.notactive,
 #idle_inhibitor.activated {
@@ -277,6 +298,7 @@ window#waybar.empty #window {
 }
 #pulseaudio.muted {
     color: @red;
+    
 }
 
 #window {
